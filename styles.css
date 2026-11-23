@@ -1,0 +1,128 @@
+/* ===== 1. Скидання та box model ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* padding і border входять у ширину елемента */
+}
+
+/* ===== 2. Селектори тегів ===== */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background: #f4f6f8;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+}
+
+h2 {
+  margin: 0 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #4f9cf9;
+  color: #1f3a5f;
+  font-size: 1.3rem;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  padding: 6px 10px;
+}
+
+p {
+  margin: 0 0 8px;
+}
+
+/* ===== 3. Селектор ID ===== */
+#top {
+  padding: 32px 24px;
+  text-align: center;
+  color: #fff;
+  background: #1f3a5f;
+  border-bottom: 4px solid #4f9cf9;
+}
+
+#about {
+  border-left: 4px solid #4f9cf9;
+}
+
+/* ===== 4. Макет на Flexbox ===== */
+.layout {
+  display: flex;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.sidebar,
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sidebar {
+  flex: 1; /* вужча колонка */
+}
+
+.content {
+  flex: 2; /* вдвічі ширша колонка */
+}
+
+/* ===== 5. Селектор класу + box model ===== */
+.card {
+  margin: 0;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #d9dee3;
+  border-radius: 8px;
+}
+
+/* ===== 6. Псевдокласи ===== */
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+li:nth-child(odd) {
+  background: #f0f6ff;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #0a3d91;
+}
+
+/* ===== 7. Селектори атрибутів ===== */
+a {
+  color: #1f6feb;
+  text-decoration: none;
+  word-break: break-all; /* довгі посилання не ламають макет */
+}
+
+a[href^="mailto:"] {
+  font-weight: bold;
+}
+
+a[target="_blank"]::after {
+  content: " ↗";
+}
+
+/* ===== 8. Медіазапит: вузький екран ===== */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column; /* колонки стають одна під одною */
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}

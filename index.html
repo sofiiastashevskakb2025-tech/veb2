@@ -2,53 +2,73 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV – Сташевська Софія Богданівна</title>
+
+    <!-- 1) EXTERNAL: основні стилі -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- 2) INTERNAL: невеликий блок стилів у самому HTML -->
+    <style>
+        footer {
+            text-align: center;
+            color: #555;
+            padding: 16px;
+        }
+    </style>
 </head>
 <body>
-    <header>
+    <header id="top">
         <h1>Сташевська Софія Богданівна</h1>
-        <p>Студентка / Фахівець з кібербезпеки</p>
+        <!-- 3) INLINE: стиль прямо на елементі -->
+        <p style="font-style: italic; margin: 0;">Студентка / Фахівець з кібербезпеки</p>
     </header>
 
-    <main>
-        <section>
-            <h2>Контактна інформація</h2>
-            <ul>
-                <li>Email: <a href="mailto:sofiia.stashevska.kb.2025@lpnu.ua">sofiia.stashevska.kb.2025@lpnu.ua</a></li>
-                <li>GitHub: <a href="https://github.com/sofiiastashevskakb2025-tech" target="_blank">github.com/sofiiastashevskakb2025-tech</a></li>
-            </ul>
-        </section>
+    <main class="layout">
 
-        <section>
-            <h2>Про мене</h2>
-            <p>Студентка спеціальності «Кібербезпека та захист інформації». Цікавлюся прикладним програмуванням, мережевими технологіями та проєктуванням баз даних. Швидко засвоюю нові технології та активно покращую рівень професійної англійської мови.</p>
-        </section>
+        <div class="sidebar">
+            <section class="card">
+                <h2>Контактна інформація</h2>
+                <ul>
+                    <li>Email: <a href="mailto:sofiia.stashevska.kb.2025@lpnu.ua">sofiia.stashevska.kb.2025@lpnu.ua</a></li>
+                    <li>GitHub: <a href="https://github.com/sofiiastashevskakb2025-tech" target="_blank">github.com/sofiiastashevskakb2025-tech</a></li>
+                </ul>
+            </section>
 
-        <section>
-            <h2>Освіта</h2>
-            <p><strong>Національний університет «Львівська політехніка»</strong></p>
-            <p>Спеціальність «Кібербезпека та захист інформації»</p>
-        </section>
+            <section class="card">
+                <h2>Технічні навички</h2>
+                <ul>
+                    <li><strong>Мови програмування:</strong> Python, базові знання SQL та HTML/CSS</li>
+                    <li><strong>Інструменти розробки:</strong> Git, Visual Studio Code</li>
+                    <li><strong>Бази даних:</strong> Проєктування реляційних баз даних, нормалізація, написання запитів</li>
+                    <li><strong>Мережі та безпека:</strong> Основи криптографії, моделювання локальних мереж, аналіз вебзапитів</li>
+                    <li><strong>Мови:</strong> Англійська</li>
+                </ul>
+            </section>
+        </div>
 
-        <section>
-            <h2>Технічні навички</h2>
-            <ul>
-                <li><strong>Мови програмування:</strong> Python, базові знання SQL та HTML/CSS</li>
-                <li><strong>Інструменти розробки:</strong> Git, Visual Studio Code</li>
-                <li><strong>Бази даних:</strong> Проєктування реляційних баз даних, нормалізація, написання запитів</li>
-                <li><strong>Мережі та безпека:</strong> Основи криптографії, моделювання локальних мереж, аналіз вебзапитів</li>
-                <li><strong>Мови:</strong> Англійська</li>
-            </ul>
-        </section>
+        <div class="content">
+            <section class="card" id="about">
+                <h2>Про мене</h2>
+                <p>Студентка спеціальності «Кібербезпека та захист інформації». Цікавлюся прикладним програмуванням, мережевими технологіями та проєктуванням баз даних. Швидко засвоюю нові технології та активно покращую рівень професійної англійської мови.</p>
+            </section>
 
-        <section>
-            <h2>Навчальні проєкти</h2>
-            <ul>
-                <li><strong>Проєкти з програмування (Python):</strong> розробка скриптів для обробки даних, створення консольних утиліт з функціями логування та базового захисту інформації.</li>
-                <li><strong>Проєктування баз даних:</strong> розробка структури реляційної бази даних для освітнього закладу, оптимізація структури таблиць.</li>
-                <li><strong>Комп'ютерні мережі:</strong> побудова та базова конфігурація мережевих топологій у віртуальному середовищі, аналіз мережевого трафіку.</li>
-            </ul>
-        </section>
+            <section class="card">
+                <h2>Освіта</h2>
+                <p><strong>Національний університет «Львівська політехніка»</strong></p>
+                <p>Спеціальність «Кібербезпека та захист інформації»</p>
+            </section>
+
+            <section class="card">
+                <h2>Навчальні проєкти</h2>
+                <ul>
+                    <li><strong>Проєкти з програмування (Python):</strong> розробка скриптів для обробки даних, створення консольних утиліт з функціями логування та базового захисту інформації.</li>
+                    <li><strong>Проєктування баз даних:</strong> розробка структури реляційної бази даних для освітнього закладу, оптимізація структури таблиць.</li>
+                    <li><strong>Комп'ютерні мережі:</strong> побудова та базова конфігурація мережевих топологій у віртуальному середовищі, аналіз мережевого трафіку.</li>
+                </ul>
+            </section>
+        </div>
+
     </main>
 
     <footer>
